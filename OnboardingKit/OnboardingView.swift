@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    var totalPages: Int = 3
+    var totalPages: Int 
     var selectedColor: Color
     var unselectedColor: Color
-    var indicatorStyle: OnboardingIndicatorStyle = .dot
+    var indicatorStyle: OnboardingIndicatorStyle // You can edit with dit
 
     @State private var currentPage: Int = 0
     @AppStorage("onboardingShown") private var onboardingShown: Bool = false
@@ -84,7 +84,7 @@ struct OnboardingView: View {
 
 #Preview {
     OnboardingView(
-        selectedColor: .blue,
+        totalPages: 3, selectedColor: .blue,
         unselectedColor: .gray.opacity(0.3),
         indicatorStyle: .rectangle // Change to .dot or .none to test
     )

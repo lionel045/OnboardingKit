@@ -14,7 +14,7 @@ import SwiftUI
             if onboardingShown {
                 HomeView()
             } else {
-                OnboardingView(selectedColor: .blue, unselectedColor: .brown)
+                OnboardingView(totalPages: 3, selectedColor: .blue, unselectedColor: .brown, indicatorStyle: .dot,)
             }
         }
     }

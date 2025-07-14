@@ -6,7 +6,7 @@
 //
 import SwiftUI
 import Swift
-
+// Handle 
 struct OnboardingIndicatorView: View {
     let totalPages: Int
     let currentPage: Int
@@ -41,7 +41,7 @@ struct OnboardingIndicatorView: View {
                     ZStack {
                         Rectangle()
                             .fill(unselectedColor)
-                            .frame(width: 110, height: 6)
+                            .frame(width: 80, height: 6)
                         if currentPage == index {
                             RoundedRectangle(cornerRadius: 3)
                                 .fill(selectedColor)
@@ -66,8 +66,8 @@ struct OnboardingIndicatorView: View {
             Text("Rectangle Style")
                 .font(.headline)
             OnboardingIndicatorView(
-                totalPages: 3,
-                currentPage: 2,
+                totalPages: 4,
+                currentPage: 1,
                 selectedColor: .green,
                 unselectedColor: .gray.opacity(0.3),
                 style: .rectangle,
@@ -82,7 +82,7 @@ struct OnboardingIndicatorView: View {
             Text("Dot Style")
                 .font(.headline)
             OnboardingIndicatorView(
-                totalPages: 3,
+                totalPages: 4,
                 currentPage: 1,
                 selectedColor: .blue,
                 unselectedColor: .gray,
